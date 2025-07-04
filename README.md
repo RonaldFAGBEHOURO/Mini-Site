@@ -84,16 +84,7 @@ L'interface vous permet de :
 
 ---
 
-## 🛑 À ne pas versionner (déjà ignoré via `.gitignore`)
-
-* `node_modules/`
-* `.env`
-* `prisma/migrations/` (optionnel)
-* fichiers système `.DS_Store`, `Thumbs.db`
-
----
-
 ##  Auteur
 
 Projet développé par Ronald FAGBEHOURO
-'''
+
