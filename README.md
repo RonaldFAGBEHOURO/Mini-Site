@@ -43,6 +43,7 @@ Dans un premier terminal à laisser tourner en arrière plan afin de lancer le s
 ```bash
 cd backend
 npm install
+npx prisma generate
 node index.js                        # Lance le serveur sur http://localhost:3001
 ````
 
