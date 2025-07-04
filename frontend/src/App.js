@@ -30,7 +30,7 @@ function App() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:3001/login', { email });
+      const res = await axios.post('http://localhost:3001/login', {  nom, email });
       setUser(res.data);
       setError('');
       fetchUsers();

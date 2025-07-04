@@ -33,9 +33,16 @@ app.post('/register', async (req, res) => {
 
 // Route de connexion
 app.post('/login', async (req, res) => {
-  const { nom, email } = req.body;  // ← récupérer aussi nom
+  const { nom, email } = req.body; 
 
   try {
+
+     if (!nom || !email) {
+      return res.status(400).json({ error: 'Nom et email sont requis' });
+    }
+
+    console.log('Données reçues pour login:', req.body);
+
     const user = await prisma.user.findFirst({
       where: {
         nom: {
@@ -59,7 +66,7 @@ app.post('/login', async (req, res) => {
 });
 
 
-// ✅ Route pour afficher tous les utilisateurs
+// Route pour afficher tous les utilisateurs
 app.get('/users', async (req, res) => {
   try {
     const users = await prisma.user.findMany();
